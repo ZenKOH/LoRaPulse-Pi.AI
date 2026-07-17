@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lorapulse-pi-ai"
+version = "0.1.0"
+description = "Airtime-aware LoRa + Raspberry Pi edge telemetry framework."
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [{name = "Zen Koh"}]
+dependencies = ["PyYAML>=6.0"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+
+[project.scripts]
+lorapulse = "lorapulse.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "gateway"}
+
+[tool.setuptools.packages.find]
+where = ["gateway"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["gateway"]
