@@ -1,0 +1,14 @@
+name: rehab-clinic-operational-telemetry
+region: EU868
+node_type: rehabilitation_device_monitor
+privacy_mode: strict
+max_payload_bytes: 51
+allowed_event_types:
+  - heartbeat
+  - session_summary
+  - alert
+  - device_fault
+defaults:
+  send_patient_identifiers: false
+  aggregate_sessions: true
+  escalation_backhaul: 4g_or_wifi
