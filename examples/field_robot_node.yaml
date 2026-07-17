@@ -1,0 +1,13 @@
+name: field-robot-telemetry
+region: US915
+node_type: field_robot
+privacy_mode: operational
+max_payload_bytes: 51
+allowed_event_types:
+  - heartbeat
+  - location_beacon
+  - device_fault
+  - alert
+defaults:
+  gps_precision_decimal_places: 5
+  large_logs_use_backhaul: true
